@@ -8,7 +8,7 @@ export function createRouteMap(routes) {
         addRouteRecord(pathList, pathMap, nameMap, route)
     })
 
-    // 将通配符的路由，推到后面
+    // 将通配符的路由，挪到后面
     for(let i = 0, l = pathList.length; i < l; i++) {
         if(pathList[i] === '*') {
             pathList.push(pathList.splice(i ,1)[0])
